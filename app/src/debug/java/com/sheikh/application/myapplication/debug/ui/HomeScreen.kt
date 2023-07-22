@@ -1,4 +1,4 @@
-package com.sheikh.application.myapplication.ui
+package com.sheikh.application.myapplication.debug.ui
 
 import android.content.Intent
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
@@ -49,9 +49,9 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
-import com.sheikh.application.myapplication.model.Stream
-import com.sheikh.application.myapplication.ui.theme.YoutubeDownloaderTheme
-import com.sheikh.application.myapplication.viewmodel.DownloadUiState
+import com.sheikh.application.myapplication.debug.model.Stream
+import com.sheikh.application.myapplication.debug.ui.theme.YoutubeDownloaderTheme
+import com.sheikh.application.myapplication.debug.viewmodel.DownloadUiState
 
 private const val TAG = "HomeScreen"
 @OptIn(ExperimentalMaterial3Api::class)
@@ -93,6 +93,7 @@ fun HomeScreen(modifier: Modifier = Modifier,
             is DownloadUiState.Default -> {
                 Button(
                     onClick = {
+                        Log.d(TAG, "Debug OnClick")
                         onClick(value)
                         focusManager.clearFocus()
                     },
@@ -118,6 +119,7 @@ fun HomeScreen(modifier: Modifier = Modifier,
             is DownloadUiState.Complete -> {
                 Button(
                     onClick = {
+                        Log.d(TAG, "Debug OnClick")
                         onClick(value)
                         focusManager.clearFocus()
                     },
@@ -128,8 +130,7 @@ fun HomeScreen(modifier: Modifier = Modifier,
                     Text(text = "Click")
                 }
 
-                HomeCard(
-                    thumbnailUrl = uiState.videoThumbnail,
+                HomeCard(thumbnailUrl = uiState.videoThumbnail,
                     videoTitle = uiState.videoTitle,
                     videoStreams = uiState.videoStreams,
                     audioStream = uiState.audioStreams,

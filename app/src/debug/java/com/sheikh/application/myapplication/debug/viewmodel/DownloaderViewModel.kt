@@ -1,4 +1,4 @@
-package com.sheikh.application.myapplication.viewmodel
+package com.sheikh.application.myapplication.debug.viewmodel
 
 import android.app.Application
 import android.content.ContentValues
@@ -21,12 +21,15 @@ import androidx.work.Data
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import com.sheikh.application.myapplication.DownloaderApplication
-import com.sheikh.application.myapplication.data.DownloaderRepository
-import com.sheikh.application.myapplication.data.WorkmanagerRepository
-import com.sheikh.application.myapplication.model.Stream
-import com.sheikh.application.myapplication.utility.getStream
-import com.sheikh.application.myapplication.worker.VideoInfoWorker
+import com.arthenica.mobileffmpeg.Config.RETURN_CODE_CANCEL
+import com.arthenica.mobileffmpeg.Config.RETURN_CODE_SUCCESS
+import com.arthenica.mobileffmpeg.FFmpeg
+import com.sheikh.application.myapplication.debug.DownloaderApplication
+import com.sheikh.application.myapplication.debug.data.DownloaderRepository
+import com.sheikh.application.myapplication.debug.data.WorkmanagerRepository
+import com.sheikh.application.myapplication.debug.model.Stream
+import com.sheikh.application.myapplication.debug.utility.getStream
+import com.sheikh.application.myapplication.debug.worker.VideoInfoWorker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.SharingStarted

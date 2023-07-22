@@ -1,4 +1,4 @@
-package com.sheikh.application.myapplication
+package com.sheikh.application.myapplication.debug
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,8 +11,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.sheikh.application.myapplication.ui.DownloaderApp
-import com.sheikh.application.myapplication.ui.theme.YoutubeDownloaderTheme
+import com.arthenica.mobileffmpeg.FFmpeg
+import com.arthenica.mobileffmpeg.FFmpegExecution
+import com.sheikh.application.myapplication.debug.ui.DownloaderApp
+import com.sheikh.application.myapplication.debug.ui.theme.YoutubeDownloaderTheme
 import java.io.File
 
 private const val TAG = "MainActivity"

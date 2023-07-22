@@ -1,4 +1,4 @@
-package com.sheikh.application.myapplication.utility
+package com.sheikh.application.myapplication.debug.utility
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -7,7 +7,7 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.sheikh.application.myapplication.R
-import com.sheikh.application.myapplication.model.Stream
+import com.sheikh.application.myapplication.debug.model.Stream
 
 val String.getStream: Stream
     get() {

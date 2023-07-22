@@ -8,6 +8,15 @@ android {
     namespace 'com.sheikh.application.myapplication'
     compileSdk 33
 
+    signingConfigs {
+        config {
+            keyAlias 'youtube'
+            keyPassword 'Sheikh'
+            storeFile file('/Users/sheikhmohideen/AndroidStudioProjects/Android-Youtube-Downloader/app/keystore.jks')
+            storePassword 'Sheikh'
+        }
+    }
+
     defaultConfig {
         applicationId "com.sheikh.application.myapplication"
         minSdk 24
@@ -45,9 +54,15 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
+            applicationIdSuffix ".debug"
             minifyEnabled false
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     compileOptions {

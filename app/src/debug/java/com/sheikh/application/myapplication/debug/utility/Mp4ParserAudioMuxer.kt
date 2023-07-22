@@ -1,4 +1,4 @@
-package com.sheikh.application.myapplication.utility
+package com.sheikh.application.myapplication.debug.utility
 
 import android.content.Context
 import android.media.MediaCodec

@@ -1,8 +1,7 @@
-package com.sheikh.application.myapplication.data
+package com.sheikh.application.myapplication.debug.data
 
 import android.content.Context
 import androidx.work.WorkInfo
-import androidx.work.WorkManager
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.mapNotNull
@@ -11,11 +10,12 @@ import androidx.lifecycle.viewModelScope
 import androidx.work.Data
 import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
-import com.sheikh.application.myapplication.model.Stream
-import com.sheikh.application.myapplication.worker.CleanerWorker
-import com.sheikh.application.myapplication.worker.DownloadWorker
-import com.sheikh.application.myapplication.worker.MergeWorker
-import com.sheikh.application.myapplication.worker.VideoInfoWorker
+import androidx.work.WorkManager
+import com.sheikh.application.myapplication.debug.model.Stream
+import com.sheikh.application.myapplication.debug.worker.CleanerWorker
+import com.sheikh.application.myapplication.debug.worker.DownloadWorker
+import com.sheikh.application.myapplication.debug.worker.MergeWorker
+import com.sheikh.application.myapplication.debug.worker.VideoInfoWorker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
